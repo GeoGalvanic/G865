@@ -1,0 +1,14 @@
+{% extends "G865/lesson-template.html" %}
+{% load static %}
+
+{% block title %}Geal's GEOG:865 Lesson 4{% endblock %}
+{% block page-title %}GEOG: 865 Lesson4 - Video Web App Walkrough{%endblock %}
+
+
+{% block lesson-content %}
+    <video width="90%" style="margin: 20px; margin-left: auto; margin-right: auto; display: block" controls>
+        <source src="{% static 'G865/l4-video.mp4' %}" type="video/mp4">
+        Whoops... It looks like your browser doesn't support HTML5 and/or MP4 video files...
+    </video>
+
+{% endblock %}

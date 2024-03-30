@@ -1,0 +1,27 @@
+{% extends "main/template.html" %}
+{% load static %}
+
+{% block head-ext %}{% endblock %}
+{% block title %}Geal's GEOG: 865 E-Portfolio{% endblock %}
+
+{% block page-title %}Welcome to Geal's GEOG: 865 E-Portfolio!{% endblock %}
+
+{% block navbar %}
+<div id="local-navbar">
+    <a href="{% url 'G865:G865' %}" class="local-nav-button bubble-container">865 Web App</a>
+    <a href="{% url 'G865:lesson-4-video' %}" class="local-nav-button bubble-container">Web App Video</a>
+    <div class="local-nav-dropdown">
+        <div class="local-nav-button bubble-container">Final Project &#9660</div>
+        <div class="dropdown-content">
+            <a href=" {% url 'G865:final-queue' %}" class="local-nav-dropdown-item">Queue Task Submitter</a>
+            <a href=" {% url 'G865:final-ec2' %}" class="local-nav-dropdown-item">EC2 Instance Manager</a>
+            <a href=" {% url 'G865:task-list' %}" class="local-nav-dropdown-item">Task List</a>
+            <a href="{% url 'G865:final-video' %}" class="local-nav-dropdown-item">Video Overview</a>
+            <a href="url 'G865:final-client' %}" class="local-nav-dropdown-item">Client Processor</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block  flex-content %}{% endblock %}
+

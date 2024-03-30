@@ -1,0 +1,18 @@
+{% extends "G865/lesson-template.html" %}
+{% load static %}
+
+{% block title %}Geal's GEOG:865 Queue Submitter{% endblock %}
+{% block page-title %}Queue Task Submitted Successfully!{%endblock %}
+
+
+{% block lesson-content %}
+    <p>
+        Your queue task "{{task_name}}" has been submitted succesfully.
+        It has been assigned task ID #
+        <a href="{% url 'G865:task-item' task_id='{{group_id}}' %}">{{group_id}}</a>.
+    </p>
+    <ul>
+        <li> <a href="{% url 'G865:task-list' %}">View my submitted tasks</a></li>
+        <li> <a href="">Add another task to queue</a></li>
+    </ul>
+{% endblock %}

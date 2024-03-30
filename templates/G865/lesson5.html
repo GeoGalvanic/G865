@@ -1,0 +1,31 @@
+{% extends "G865/lesson-template.html" %}
+{% load static %}
+
+{% block title %}Geal's GEOG:865 MapBox Application{% endblock %}
+{% block page-title %}GEOG: 865 Lesson5 - MapBox Application{%endblock %}
+
+{% block head-ext %}
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+    <script src="{% static 'G865/lesson5.js' %}"></script>
+    <style>
+        #map {
+            padding: 0;
+            margin: 0;
+            height: 80vh;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 0;
+          }
+    </style>
+{%endblock%}
+
+
+{% block lesson-content %}
+
+<h1 id="title">Rapid City Addresses/Bandwidth Availability</h1>
+<div id="map"></div>
+
+{% endblock %}

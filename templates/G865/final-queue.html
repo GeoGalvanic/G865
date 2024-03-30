@@ -1,0 +1,17 @@
+{% extends "G865/lesson-template.html" %}
+{% load static %}
+
+{% block title %}Geal's GEOG:865 Queue Submitter{% endblock %}
+{% block page-title %}GEOG: 865 Queue Task Submitter{%endblock %}
+
+
+{% block lesson-content %}
+    <div id="Disclaimer" style="color: red; background: black">
+        The distributed EC2 instances used for this project have been shut down to save on running costs. If you would like to demo the capabilities you can contact me and I can turn the servers back on for you. Alternatively you can take a look at the <a href="{% url 'G865:final-video' %}">demonstration video</a> to see how it functioned.
+    </div>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="Submit" value="Add Task" class='site-button'>
+    </form>
+{% endblock %}

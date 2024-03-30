@@ -1,0 +1,25 @@
+{% extends "G865/lesson-template.html" %}
+{% load static %}
+
+{% block title %}Geal's GEOG:865 EC2 Server Manager{% endblock %}
+{% block page-title %}GEOG: 865 EC2 Server Manager{%endblock %}
+
+
+{% block lesson-content %}
+    <p><a href="{% url 'G865:task-list' %}">Go to my task list</a></p>
+    <h2>{{item.name}} Task Details</h2>
+    <ul>
+        <li>ID: {{item.id}}</li>
+        <li>Creator: {{item.creator_user.username}}</li>
+        <li>Uploaded File: {{item.upload_file_name}}</li>
+        <li>Buffers: {{item.buffer_string}}</li>
+        <li>Time Started: {{item.start_time}}</li>
+        <li>{{completed_features}} / {% widthratio item.number_features 1 item.number_buffers %}
+            ({{item.number_features}} points X {{item.number_buffers}} buffers)
+        </li>
+        {% if item.output_file %}
+            <li>Download Results</li>
+        {% endif %}
+    </ul>
+
+{% endblock %}

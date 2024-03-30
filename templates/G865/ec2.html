@@ -1,0 +1,22 @@
+{% extends "G865/lesson-template.html" %}
+{% load static %}
+
+{% block title %}Geal's GEOG:865 EC2 Server Manager{% endblock %}
+{% block page-title %}GEOG: 865 EC2 Server Manager{%endblock %}
+
+
+{% block lesson-content %}
+    <h2>Server Statuses</h2>
+    <ul>
+        {% for server, status in statuses.items %}
+            <li>{{server}}: {{status}}</li>
+        {% endfor %}
+    </ul>
+
+    <form method="POST">
+        {% csrf_token %}
+        <button type="Submit" name="Switch" value="On" class='site-button'>Turn Servers On</button>
+        <button type="Submit" name="Switch" value="Off" class='site-button'>Turn Servers Off</button>
+        <button type="Submit" formmethod="get" class='site-button'>Refresh Status</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "G865/lesson-template.html" %}
+{% load static %}
+
+{% block title %}Geal's GEOG:865 Final Project Video Overview{% endblock %}
+{% block page-title %}GEOG: 865 Final Project Video Overview{% endblock %}
+
+
+{% block lesson-content %}
+<div id="Disclaimer" style="color: red; background: black">
+    The distributed EC2 instances used for this project have been shut down to save on running costs. If you would like to demo the capabilities you can contact me and I can turn the servers back on for you. Alternatively you can watch this video to see how it functioned.
+</div>
+    <video width="90%" style="margin-left: auto; margin-right: auto; display: block" controls>
+        <source src="{% static 'G865/final_video.mp4' %}" type="video/mp4">
+        Whoops... It looks like your browser doesn't support HTML5 and/or MP4 video files...
+    </video>
+{% endblock %}

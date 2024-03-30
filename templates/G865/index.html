@@ -1,0 +1,22 @@
+{% extends "G865/lesson-template.html" %}
+{% load static %}
+
+{% block title %}Geal's GEOG:865 Lesson 4 Project{% endblock %}
+{% block page-title %}GEOG: 865 Lesson 4 Project - Anywhere, USA Web App{% endblock %}
+
+{% block head-ext %}
+  <link rel="stylesheet" type="text/css" href="{% static 'G865/map.css' %}" />
+  <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.21/esri/themes/dark/main.css"
+  />
+  <script src="https://js.arcgis.com/4.21/"></script>
+  <script src="{% static 'G865/lesson4.js' %}"></script>
+{% endblock %}
+
+{% block lesson-content %}
+    <div id="Disclaimer" style="color: red; background: black">
+      The server that ran this application has been shut down since the ArcGIS server license used during the class expired. This page is kept purely for historical purposes. You can see what this application used to look like by taking a look at the application <a href="{% url 'G865:lesson-4-video' %}">demonstration video</a>
+    </div>
+    <div id="viewDiv"></div>
+{% endblock %}
